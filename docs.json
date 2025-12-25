@@ -55,7 +55,7 @@
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Endpoints",
             "pages": [
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
@@ -76,7 +76,7 @@
         {
           "anchor": "Avicenna API",
           "href": "https://docs.avicenna.dev/api-reference",
-          "icon": "console"
+          "icon": "terminal"
         }
       ]
     }
