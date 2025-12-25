@@ -1,0 +1,18 @@
+# Dependency directory
+node_modules/
+
+# Lock file (if you use npm/yarn)
+package-lock.json
+
+# Mintlify-specific ignore file (if applicable)
+.mintignore
+
+# IDE and OS specific files
+.DS_Store
+.idea/
+.vscode/
+
+# Build output and logs (if you have other build processes)
+/build
+/dist
+*.log
