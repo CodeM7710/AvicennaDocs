@@ -75,8 +75,8 @@
         },
         {
           "anchor": "Avicenna API",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "href": "https://docs.avicenna.dev/api-reference",
+          "icon": "console"
         }
       ]
     }
