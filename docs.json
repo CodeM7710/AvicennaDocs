@@ -26,35 +26,22 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Workshop",
+            "pages": [
+              {
+                "group": "Actions",
+                "pages": [
+                  "guides/workshop/actions/manipulate-text"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
               "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
             ]
           }
         ]
