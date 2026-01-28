@@ -7,12 +7,26 @@
   },
   "favicon": "/favicon.ico",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Documentation",
+          "icon": "book-open-cover",
+          "href": "https://docs.avicenna.dev/"
+        },
+        {
+          "anchor": "Avicenna API",
+          "icon": "terminal",
+          "href": "https://docs.avicenna.dev/api-reference"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting starteds",
+            "group": "Getting started",
             "pages": [
               "index",
               "quickstart",
@@ -65,21 +79,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://docs.avicenna.dev/",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Avicenna API",
-          "href": "https://docs.avicenna.dev/api-reference",
-          "icon": "terminal"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -104,10 +104,7 @@
      "view",
      "chatgpt",
      "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
+     "perplexity"
    ]
   },
   "footer": {
