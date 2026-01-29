@@ -1,20 +1,20 @@
 ---
-title: "Encode Text"
-icon: "key-skeleton"
-description: "Encode text using standard encoding formats"
+title: "Decode Text"
+icon: "unlock-keyhole"
+description: "Decode text using standard encoding formats"
 ---
 
-The **Encode Text** block allows you to encode text into various different formats. Encoding is useful when a service (such as an external API) is only compatible with certain encoding formats.
+The **Decode Text** block allows you to decode text from various different formats into standard readable text. Decoding is required when a service (such as an external API) provides an encoded form of text that you need to decode and use in your endpoint.
 
-![Screenshot of the Encode Text action block](/Screenshot2026-01-27at10.15.16PM.png)
+![Screenshot of the Decode Text action block](/images/Screenshot2026-01-28at7.13.19PM.png)
 
 ### Input Text
 
-The **input text** is the base text value that will be encoded. This may be static text or a variable.
+The **input text** is the base text value that will be decoded. This may be static text or a variable.
 
 ### Encoding Method
 
-The **encoding method** is the format of encoding that will be used on your text value. Below are listed the available formats that can be used to encode a text value using the Encode Text action:
+The **encoding method** is the format of encoding that your text value is in. Below are listed the available formats that a text value can be decoded from using the Decode Text action:
 
 | **Format** | **Description**                                                                     | **Example Output**                                                                                   |
 | ---------- | ----------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ The **encoding method** is the format of encoding that will be used on your text
 
 ### Reference Variable
 
-![Screenshot of reference variable settings](/Screenshot2026-01-28at7.07.31PM.png)
+![Screenshot of reference variable settings](/images/Screenshot2026-01-28at7.14.05PM.png)
 
 This variable allows you to refer to the result of the text encoding in future action blocks down your endpoint's flow. This variable must be assigned a custom name.
 

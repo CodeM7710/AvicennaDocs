@@ -41,7 +41,8 @@
                 "icon": "screwdriver-wrench",
                 "pages": [
                   "guides/workshop/actions/manipulate-text",
-                  "guides/workshop/actions/manipulate-text-copied-1"
+                  "guides/workshop/actions/manipulate-text-copied-1",
+                  "guides/workshop/actions/manipulate-text-copied-2"
                 ]
               }
             ]
