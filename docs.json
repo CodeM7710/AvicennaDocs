@@ -39,8 +39,8 @@
                 "icon": "hammer",
                 "pages": [
                   "guides/workshop/actions/manipulate-text",
-                  "guides/workshop/actions/manipulate-text-copied-1",
-                  "guides/workshop/actions/manipulate-text-copied-2"
+                  "guides/workshop/actions/encode-text",
+                  "guides/workshop/actions/decode-text"
                 ]
               }
             ]
