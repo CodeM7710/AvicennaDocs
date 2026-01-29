@@ -26,22 +26,24 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Workshop",
-            "pages": [
-              {
-                "group": "Actions",
-                "pages": [
-                  "guides/workshop/actions/manipulate-text"
-                ]
-              }
-            ]
-          },
-          {
             "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
               "development"
+            ]
+          },
+          {
+            "group": "Workshop",
+            "pages": [
+              {
+                "group": "Actions",
+                "icon": "screwdriver-wrench",
+                "pages": [
+                  "guides/workshop/actions/manipulate-text",
+                  "guides/workshop/actions/manipulate-text-copied-1"
+                ]
+              }
             ]
           }
         ]

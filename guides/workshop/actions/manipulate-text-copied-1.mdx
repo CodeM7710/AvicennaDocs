@@ -1,0 +1,36 @@
+---
+title: "Encode Text"
+icon: "pen-ruler"
+description: "Encode text using standard encoding formats"
+---
+
+The **Encode Text** block allows you to encode text into various different formats. Encoding is useful when a service (such as an external API) is only compatible with certain encoding formats.
+
+![Screenshot2026 01 27at10 15 16PM](/Screenshot2026-01-27at10.15.16PM.png)
+
+### Input Text
+
+The **input text** is the base text value that will be encoded. This may be static text or a variable.
+
+### Encoding Method
+
+The **encoding method** is the format of encoding that will be used on your text value. Below are listed the available formats that can be used to encode a text value using the Encode Text action:
+
+| **Format** | **Description**                                                                     | **Example Output**                                                                                   |
+| ---------- | ----------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| Base64     | Helps prevent data corruption in JSON, HTTP Headers, etc.                           | `SGVsbG8gVGhlcmU=`                                                                                   |
+| Base64URL  | URL-safe version of Base64 that prevents corruption in URLs, query parameters, etc. | `SGVsbG8gVGhlcmU`                                                                                    |
+| Hex        | Converts to hexadecimal with a base-16 format for compacting and safety             | `48656c6c6f205468657265`                                                                             |
+| UTF-8      | Efficient endocing format used for web services and multilingual compatibility      | `Hello There`                                                                                        |
+| ASCII      | Standard binary integer used to represent English characters                        | `Hello There`                                                                                        |
+| Binary     | Foundational 2-bit encoding format used at the deepest levels of computing          | `01001000 01100101 01101100 01101100 01101111 00100000 01010100 01101000 01100101 01110010 01100101` |
+
+### Reference Variable
+
+![Screenshot of reference variable settings](/Screenshot2026-01-28at7.07.31PM.png)
+
+This variable allows you to refer to the result of the text encoding in future action blocks down your endpoint's flow. This variable must be assigned a custom name.
+
+<Tip>
+  Make your reference variable names as descriptive and unique as possible to prevent your endpoint flow from becoming cluttered. If a future variable is assigned the same name, the value of your reference variable will be overriden.
+</Tip>
