@@ -36,7 +36,7 @@
             "pages": [
               {
                 "group": "Actions",
-                "icon": "screwdriver-wrench",
+                "icon": "hammer",
                 "pages": [
                   "guides/workshop/actions/manipulate-text",
                   "guides/workshop/actions/manipulate-text-copied-1",
