@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "mint",
   "name": "Avicenna Documentation",
   "colors": {
     "primary": "#005446"
@@ -106,7 +106,7 @@
     "default": "dark"
   },
   "background": {
-    "decoration": "windows"
+    "decoration": "grid"
   },
   "thumbnails": {
     "appearance": "dark"
@@ -129,5 +129,8 @@
   },
   "seo": {
     "indexing": "all"
+  },
+  "search": {
+    "prompt": "Search the Avicenna Docs..."
   }
 }
