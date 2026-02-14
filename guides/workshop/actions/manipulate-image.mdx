@@ -1,0 +1,51 @@
+---
+title: "Manipulate Image"
+icon: "sliders-horizontal"
+description: "Adjust an image using filters and color operations"
+---
+
+The **Manipulate Image** block allows you to apply visual filters to an image URL inside your endpoint flow. You can use this to adjust image appearance such as contrast, brightness, blur, hue, and more.
+
+### Image Preview
+
+The block includes a live **image preview** so you can quickly verify how your selected operation and values will affect the image before continuing your flow.
+
+### Image URL
+
+The **Image URL** field is the source image that will be manipulated. This can be a direct URL or a variable from an earlier block.
+
+### Operation
+
+The **operation** determines which filter is applied to the image. Below are the available options:
+
+| **Operation** | **Description** | **Example Input** |
+| --- | --- | :--- |
+| Contrast | Increases or decreases the difference between dark and light parts of the image | `120%` |
+| Brightness | Makes the image lighter or darker overall | `90%` |
+| Saturation | Increases or decreases color intensity | `140%` |
+| Grayscale | Converts the image toward grayscale | `80%` |
+| Invert | Inverts the image colors | `100%` |
+| Blur | Applies a blur effect | `5px` |
+| Hue Rotate | Rotates all colors around the hue wheel | `45deg` |
+
+### Dynamic Operation Inputs
+
+Depending on the operation you choose, the sidebar displays different input fields:
+
+- **Amount** for Contrast, Brightness, Saturation, and Hue Rotate.
+- **Blur Amount** for Blur.
+- **Level (0–100%)** for Grayscale and Invert.
+
+### Reference Variable
+
+The **Reference Variable** field lets you store the manipulated image result in a variable so it can be reused in later blocks.
+
+<Tip>
+  Use short, descriptive names for reference variables (for example, `hero-banner-image`) so they are easy to identify and reuse throughout your flow.
+</Tip>
+
+After setting a reference variable, you can use:
+
+`{result.your-reference-variable}`
+
+in downstream blocks to refer to the manipulated image URL.

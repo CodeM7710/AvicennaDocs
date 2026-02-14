@@ -25,6 +25,7 @@
                 "icon": "hammer",
                 "pages": [
                   "guides/workshop/actions/manipulate-text",
+                  "guides/workshop/actions/manipulate-image",
                   "guides/workshop/actions/encode-text",
                   "guides/workshop/actions/decode-text"
                 ]
