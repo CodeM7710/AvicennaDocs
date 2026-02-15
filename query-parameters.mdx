@@ -1,6 +1,6 @@
 ---
 title: "Query Parameters"
-icon: "anchor-lock"
+icon: "brackets-curly"
 ---
 
 Endpoints with configured **query parameters** allow extra information included in requests to be made available in your endpoint flow through variables.
@@ -11,13 +11,9 @@ Endpoints with configured **query parameters** allow extra information included 
 
 Up to 10 query parameters can be configured per endpoint. Parameters are configured in key-value pairs. Here's what an example request containing query parameters would look like:
 
-<RequestExample>
-
-```shellscript request.js
-curl https://example.avicenna.dev/api/my-endpoint?name=Bobby&age=22
+```shellscript
+https://example.avicenna.dev/api/my-endpoint?name=Bobby&age=22
 ```
-
-</RequestExample>
 
 <Note>
   Query parameters included in a request that are not configured in the endpoint's workshop will be ignored.
@@ -37,4 +33,4 @@ The parameter's **default value** is an optional value that will be used as the 
 
 ### Reference Variable
 
-To reference the parameter's value in a request, use its **reference variable **anywhere within the endpoint's flow. The syntax for a query parameter's reference variable will always be `{params.KEY_NAME}` .
+To reference the parameter's value in a request, use its \*\*reference variable \*\*anywhere within the endpoint's flow. The syntax for a query parameter's reference variable will always be `{params.KEY_NAME}` .
