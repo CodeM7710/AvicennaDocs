@@ -61,7 +61,7 @@
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/images/solo.png"
+    "dark": "/images/avicenna-text-duallogo.png"
   },
   "navbar": {
     "links": [
@@ -92,7 +92,7 @@
     }
   },
   "appearance": {
-    "strict": false,
+    "strict": true,
     "default": "dark"
   },
   "background": {
