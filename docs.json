@@ -20,6 +20,7 @@
           {
             "group": "Workshop",
             "pages": [
+              "query-parameters",
               {
                 "group": "Actions",
                 "icon": "hammer",
