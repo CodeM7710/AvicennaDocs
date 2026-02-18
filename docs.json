@@ -4,8 +4,8 @@
   "name": "Avicenna Documentation",
   "colors": {
     "primary": "#005446",
-    "dark": "#01836d",
-    "light": "#01836d"
+    "dark": "#03b295",
+    "light": "#03b295"
   },
   "favicon": "/favicon.ico",
   "navigation": {
