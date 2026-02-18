@@ -23,7 +23,7 @@
           {
             "group": "Workshop",
             "pages": [
-              "overview",
+              "workshop-overview",
               "query-parameters",
               {
                 "group": "Actions",
