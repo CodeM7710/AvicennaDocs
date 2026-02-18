@@ -21,7 +21,7 @@
           {
             "group": "Workshop",
             "pages": [
-              "workshop-overview",
+              "overview",
               "query-parameters",
               {
                 "group": "Actions",
@@ -102,7 +102,11 @@
     "decoration": "grid"
   },
   "thumbnails": {
-    "appearance": "dark"
+    "appearance": "dark",
+    "background": "/images/hero-bg1.jpeg",
+    "fonts": {
+      "family": "Lato"
+    }
   },
   "styling": {
     "latex": false
