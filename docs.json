@@ -3,7 +3,9 @@
   "theme": "maple",
   "name": "Avicenna Documentation",
   "colors": {
-    "primary": "#005446"
+    "primary": "#005446",
+    "dark": "#01836d",
+    "light": "#01836d"
   },
   "favicon": "/favicon.ico",
   "navigation": {
