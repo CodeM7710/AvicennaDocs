@@ -14,12 +14,14 @@
           {
             "group": "Getting Started",
             "pages": [
-              "index"
+              "index",
+              "quickstart"
             ]
           },
           {
             "group": "Workshop",
             "pages": [
+              "workshop-overview",
               "query-parameters",
               {
                 "group": "Actions",
@@ -61,7 +63,8 @@
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/images/avicenna-text-duallogo.png"
+    "dark": "/images/avicenna-text-duallogo.png",
+    "href": "https://www.avicenna.dev/"
   },
   "navbar": {
     "links": [
@@ -122,5 +125,8 @@
   },
   "search": {
     "prompt": "Search the Avicenna Docs..."
+  },
+  "fonts": {
+    "family": "Lato"
   }
 }
