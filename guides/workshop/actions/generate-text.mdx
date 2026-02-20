@@ -1,0 +1,99 @@
+---
+title: "Generate Text"
+icon: "sparkles"
+description: "Use AI to generate text from a prompt within your flow."
+---
+
+The **Generate Text** action allows you to use the ChatGPT integration to generate text dynamically during your endpoint’s execution.
+
+This block sends your prompt to the selected AI model and returns the generated output, which can then be stored and reused in later blocks.
+
+---
+
+## ChatGPT Integration
+
+This action requires a connected ChatGPT integration.
+
+If no integration is connected, you will be prompted to connect one before the block can run.
+
+---
+
+## Prompt
+
+The **Prompt** field is the instruction sent to the AI model.
+
+You can:
+
+- Write plain text instructions  
+- Include dynamic variables using `{}` syntax  
+- Combine static and dynamic values  
+
+### Example
+
+```text
+Write a short welcome email for {params.partner}.
+```
+
+The AI will receive the fully resolved prompt at runtime.
+
+---
+
+## Model
+
+The **Model** dropdown allows you to choose which AI model will generate the response.
+
+Different models may vary in:
+
+- Speed  
+- Cost  
+- Output quality  
+- Context length  
+
+Choose the model that best fits your use case.
+
+---
+
+## Temperature
+
+The **Temperature** controls how creative or deterministic the output will be.
+
+- `0.0` → Very deterministic and predictable  
+- `0.5` → Balanced  
+- `1.0` → More creative and varied  
+
+Lower values are ideal for structured or factual outputs.  
+Higher values are better for brainstorming or creative writing.
+
+---
+
+## Reference Variable
+
+The **Reference Variable** defines where the generated output will be stored.
+
+Once set, you can reference the AI’s response anywhere later in the flow using:
+
+```
+{local.VARIABLE_NAME}
+```
+
+### Example
+
+If:
+
+- **Reference Variable:** `summary`
+
+You can later use:
+
+```
+{local.summary}
+```
+
+---
+
+## Behavior & Scope
+
+- The text is generated at runtime when the block executes.  
+- The output is stored only for the current endpoint execution.  
+- If another block later uses the same reference variable name, the previous value will be overridden.  
+
+The **Generate Text** block is ideal for creating dynamic emails, summaries, transformations, classifications, and other AI-powered outputs directly inside your API flow.
