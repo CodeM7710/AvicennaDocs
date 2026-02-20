@@ -1,0 +1,76 @@
+---
+title: "Set Variable"
+icon: "variable"
+description: "Create and store a per-execution variable for use throughout your flow."
+---
+
+The **Set Variable** action allows you to define a value that can be reused anywhere in your endpoint’s execution. Variables created with this block are scoped to the current execution and can be referenced in any subsequent block.
+
+<Frame>
+  
+</Frame>
+
+<Frame>
+  ![Screenshot2026 02 20at23 27 07](/images/Screenshot2026-02-20at23.27.07.png)
+</Frame>
+
+### Name
+
+The **Name** field defines the identifier of your variable.
+
+This is the key you will use when referencing the value later in the flow. Variable names:
+
+- Must be unique within the same execution scope
+- Should not contain spaces
+- Are case-sensitive
+
+<Note>
+  If another **Set Variable** block uses the same name later in the flow, the previous value will be overridden.
+</Note>
+
+### Value
+
+The **Value** field defines what is stored inside the variable.
+
+This can be:
+
+- Static text (e.g. `Hello world`)
+- A number (e.g. `42`)
+- A boolean (`true` / `false`)
+- A dynamic reference (e.g. `{request.body.name}`)
+- A computed value from previous blocks or input from a query parameter
+
+The value is stored exactly as defined at the moment this block runs.
+
+---
+
+## Referencing Variables
+
+To use a variable created by this block, use the following syntax:
+
+```
+{local.VARIABLE_NAME}
+```
+
+### Example
+
+If you create:
+
+- **Name:** `userId`
+- **Value:** `{request.body.id}`
+
+You can reference it later as:
+
+```
+{local.userId}
+```
+
+---
+
+## Behavior & Scope
+
+- Variables are available only during the current endpoint execution.
+- They do not persist between requests.
+- They can be overridden by redefining the same name later in the flow.
+
+The **Set Variable** block helps keep flows clean, readable, and easier to maintain.
