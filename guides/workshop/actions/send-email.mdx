@@ -1,0 +1,122 @@
+---
+title: "Send Email"
+icon: "mail"
+description: "Send a custom email using the Resend integration."
+---
+
+The **Send Email** block allows you to send transactional or dynamic emails directly within your endpoint’s execution using the Resend integration.
+
+This block sends an email at runtime and can include static content or dynamic variables from earlier in your flow.
+
+<Frame>
+  ![Screenshot2026 02 21at18 28 04](/images/Screenshot2026-02-21at18.28.04.png)
+</Frame>
+
+---
+
+## Resend Integration
+
+This action requires a connected **Resend** integration.
+
+If no integration is connected, you will be prompted to connect one before the block can execute.
+
+---
+
+## To
+
+The **To** field defines the recipient of the email.
+
+You can enter:
+
+- A static email address
+- A dynamic variable
+- A combination of both
+
+### Examples
+
+```text
+user@example.com
+```
+
+```text
+{params.recipient}
+```
+
+---
+
+## From
+
+The **From** field defines the sender of the email.
+
+Format:
+
+```text
+Your App Name <hello@yourdomain.com>
+```
+
+The sending domain must be verified within your Resend account.
+
+---
+
+## Subject
+
+The **Subject** field defines the email’s subject line.
+
+You may include dynamic variables using `{}` syntax.
+
+### Example
+
+```text
+Welcome to our platform, {params.name}!
+```
+
+---
+
+## Body
+
+The **Body** field contains the content of the email.
+
+You can:
+
+- Write plain text
+- Include dynamic variables
+- Combine static and dynamic content
+
+### Example
+
+```text
+Hi {params.name},
+
+Thank you for signing up.
+
+Best,
+The Team
+```
+
+All variables are resolved at runtime before the email is sent.
+
+---
+
+## Using Variables
+
+Any previously stored variable can be referenced using:
+
+```
+{local.VARIABLE_NAME}
+```
+
+Example:
+
+```
+{local.summary}
+```
+
+---
+
+## Behavior & Scope
+
+- The email is sent immediately when the block executes.
+- If the block fails (e.g., invalid email or unverified domain), the flow may stop depending on your error handling setup.
+- Dynamic variables are resolved at runtime.
+
+The **Send Email** block is ideal for confirmations, notifications, alerts, and AI-generated messages within your API flows.
