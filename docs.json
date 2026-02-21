@@ -35,7 +35,8 @@
                   "guides/workshop/actions/encode-text",
                   "guides/workshop/actions/decode-text",
                   "guides/workshop/actions/set-variable",
-                  "guides/workshop/actions/generate-text"
+                  "guides/workshop/actions/generate-text",
+                  "guides/workshop/actions/send-email"
                 ]
               }
             ]
