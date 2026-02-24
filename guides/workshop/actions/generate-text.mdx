@@ -4,79 +4,73 @@ icon: "sparkles"
 description: "Use AI to generate text from a prompt within your flow."
 ---
 
-The **Generate Text** action allows you to use the ChatGPT integration to generate text dynamically during your endpoint’s execution.
+The **Generate Text** action allows you to generate text dynamically during your endpoint execution using your connected ChatGPT integration.
 
-This block sends your prompt to the selected AI model and returns the generated output, which can then be stored and reused in later blocks.
+At runtime, this block sends your prompt to the selected model and stores the generated output for use in later blocks.
 
----
+<Frame>
+  ![Generate Text action block](/images/Screenshot2026-02-17at7.00.55PM.png)
+</Frame>
 
-## ChatGPT Integration
+### ChatGPT Integration
 
 This action requires a connected ChatGPT integration.
 
 If no integration is connected, you will be prompted to connect one before the block can run.
 
----
+### Prompt
 
-## Prompt
-
-The **Prompt** field is the instruction sent to the AI model.
+The **Prompt** field is the instruction sent to the model.
 
 You can:
 
-- Write plain text instructions  
-- Include dynamic variables using `{}` syntax  
-- Combine static and dynamic values  
+- Write plain text instructions
+- Include dynamic variables using `{}` syntax
+- Combine static and dynamic values
 
-### Example
+#### Example
 
 ```text
 Write a short welcome email for {params.partner}.
 ```
 
-The AI will receive the fully resolved prompt at runtime.
+The model receives the fully resolved prompt at runtime.
 
----
+### Model
 
-## Model
+The **Model** dropdown defines which model generates the response.
 
-The **Model** dropdown allows you to choose which AI model will generate the response.
+Different models can vary in:
 
-Different models may vary in:
-
-- Speed  
-- Cost  
-- Output quality  
-- Context length  
+- Speed
+- Cost
+- Output quality
+- Context length
 
 Choose the model that best fits your use case.
 
----
+### Temperature
 
-## Temperature
+The **Temperature** value controls how deterministic or creative the output is.
 
-The **Temperature** controls how creative or deterministic the output will be.
+- `0.0` → Very deterministic and predictable
+- `0.5` → Balanced
+- `1.0` → More creative and varied
 
-- `0.0` → Very deterministic and predictable  
-- `0.5` → Balanced  
-- `1.0` → More creative and varied  
-
-Lower values are ideal for structured or factual outputs.  
+Lower values are ideal for structured or factual outputs.
 Higher values are better for brainstorming or creative writing.
 
----
-
-## Reference Variable
+### Reference Variable
 
 The **Reference Variable** defines where the generated output will be stored.
 
-Once set, you can reference the AI’s response anywhere later in the flow using:
+Once set, you can reference the response later in your flow using:
 
-```
+```text
 {local.VARIABLE_NAME}
 ```
 
-### Example
+#### Example
 
 If:
 
@@ -84,16 +78,14 @@ If:
 
 You can later use:
 
-```
+```text
 {local.summary}
 ```
 
----
+### Behavior & Scope
 
-## Behavior & Scope
+- Text is generated at runtime when the block executes.
+- Output is stored only for the current endpoint execution.
+- If another block later uses the same reference variable name, the previous value is overridden.
 
-- The text is generated at runtime when the block executes.  
-- The output is stored only for the current endpoint execution.  
-- If another block later uses the same reference variable name, the previous value will be overridden.  
-
-The **Generate Text** block is ideal for creating dynamic emails, summaries, transformations, classifications, and other AI-powered outputs directly inside your API flow.
+The **Generate Text** block is useful for dynamic emails, summaries, classifications, and other AI-powered outputs in your API flow.
