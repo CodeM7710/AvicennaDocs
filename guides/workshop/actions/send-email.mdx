@@ -4,27 +4,23 @@ icon: "mail"
 description: "Send a custom email using the Resend integration."
 ---
 
-The **Send Email** block allows you to send transactional or dynamic emails directly within your endpoint’s execution using the Resend integration.
+The **Send Email** action lets you send transactional or dynamic emails directly in your endpoint flow using the Resend integration.
 
-This block sends an email at runtime and can include static content or dynamic variables from earlier in your flow.
+This block runs at execution time and supports both static content and dynamic variables from previous steps.
 
 <Frame>
   ![Screenshot2026 02 21at18 28 04](/images/Screenshot2026-02-21at18.28.04.png)
 </Frame>
 
----
-
-## Resend Integration
+### Resend Integration
 
 This action requires a connected **Resend** integration.
 
 If no integration is connected, you will be prompted to connect one before the block can execute.
 
----
+### To
 
-## To
-
-The **To** field defines the recipient of the email.
+The **To** field defines the recipient.
 
 You can enter:
 
@@ -32,7 +28,7 @@ You can enter:
 - A dynamic variable
 - A combination of both
 
-### Examples
+#### Examples
 
 ```text
 user@example.com
@@ -42,11 +38,9 @@ user@example.com
 {params.recipient}
 ```
 
----
+### From
 
-## From
-
-The **From** field defines the sender of the email.
+The **From** field defines the sender.
 
 Format:
 
@@ -54,27 +48,23 @@ Format:
 Your App Name <hello@yourdomain.com>
 ```
 
-The sending domain must be verified within your Resend account.
+The sending domain must be verified in your Resend account.
 
----
+### Subject
 
-## Subject
+The **Subject** field defines the subject line.
 
-The **Subject** field defines the email’s subject line.
+You can include dynamic variables using `{}` syntax.
 
-You may include dynamic variables using `{}` syntax.
-
-### Example
+#### Example
 
 ```text
 Welcome to our platform, {params.name}!
 ```
 
----
+### Body
 
-## Body
-
-The **Body** field contains the content of the email.
+The **Body** field contains the email content.
 
 You can:
 
@@ -82,7 +72,7 @@ You can:
 - Include dynamic variables
 - Combine static and dynamic content
 
-### Example
+#### Example
 
 ```text
 Hi {params.name},
@@ -95,28 +85,24 @@ The Team
 
 All variables are resolved at runtime before the email is sent.
 
----
-
-## Using Variables
+### Using Variables
 
 Any previously stored variable can be referenced using:
 
-```
+```text
 {local.VARIABLE_NAME}
 ```
 
 Example:
 
-```
+```text
 {local.summary}
 ```
 
----
-
-## Behavior & Scope
+### Behavior & Scope
 
 - The email is sent immediately when the block executes.
-- If the block fails (e.g., invalid email or unverified domain), the flow may stop depending on your error handling setup.
+- If the block fails (for example, invalid email or unverified domain), flow execution may stop depending on your error handling setup.
 - Dynamic variables are resolved at runtime.
 
-The **Send Email** block is ideal for confirmations, notifications, alerts, and AI-generated messages within your API flows.
+The **Send Email** block is useful for confirmations, notifications, alerts, and AI-generated messaging.
