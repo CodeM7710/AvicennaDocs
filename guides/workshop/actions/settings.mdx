@@ -1,0 +1,103 @@
+---
+title: "Settings"
+icon: "settings"
+description: "Configure your API’s general settings, authentication, and integrations."
+---
+
+The **Settings** page allows you to configure your API’s core configuration, security requirements, and external integrations.
+
+These settings apply to the entire API project.
+
+---
+
+## General
+
+The **General** section defines your API’s identity and access behavior.
+
+### Project Name
+
+The **Project Name** is your API’s internal reference name.
+
+- Used for identification inside your dashboard  
+- Does not affect the public endpoint URL  
+- Can be changed at any time  
+
+This is useful when managing multiple APIs.
+
+---
+
+### Subdomain
+
+The **Subdomain** determines where your API is hosted.
+
+For example:
+
+```
+https://your-subdomain.avicenna.dev
+```
+
+Once saved, your API will be accessible through this subdomain.
+
+<Note>
+  Changing the subdomain may affect any applications currently using your endpoint.
+</Note>
+
+---
+
+### Require Authentication
+
+When **Require Authentication** is enabled:
+
+- All incoming requests must include a valid API key  
+- Requests without a valid key will be rejected  
+
+API keys are managed in the **Authentication** section of your dashboard.
+
+This setting is recommended for production APIs.
+
+---
+
+## Integrations
+
+The **Integrations** section allows you to connect third-party services that can be used inside your endpoint flows.
+
+Once connected, these integrations become available in relevant blocks (e.g., Generate Text, Send Email).
+
+---
+
+### ChatGPT
+
+The **ChatGPT** integration enables:
+
+- AI text generation  
+- AI image generation  
+- Prompt-based automation inside flows  
+
+Required for using the **Generate Text** block.
+
+---
+
+### Resend
+
+The **Resend** integration enables:
+
+- Sending transactional emails  
+- Sending broadcast emails  
+- Dynamic email content using variables  
+
+Required for using the **Send Email** block.
+
+---
+
+## Saving Changes
+
+After modifying any settings:
+
+1. Click **Save**
+2. Changes are applied to your API project
+
+Some changes (such as subdomain updates) may require a short propagation period before taking effect.
+
+---
+
+The **Settings** page centralizes your API’s identity, security configuration, and connected services, ensuring your endpoints run securely and integrate seamlessly with external tools.
