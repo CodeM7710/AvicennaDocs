@@ -44,8 +44,8 @@
           {
             "group": "Dashboard",
             "pages": [
-              "settings",
-              "logs"
+              "guides/dashboard/settings",
+              "guides/dashboard/logs"
             ]
           }
         ]
