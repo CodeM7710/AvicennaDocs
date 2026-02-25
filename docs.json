@@ -40,7 +40,12 @@
                   "guides/workshop/actions/settings",
                   "guides/workshop/actions/logs"
                 ]
-              }
+              },
+          {
+            "group": "Dashboard",
+            "pages": [
+              "settings",
+              "logs"
             ]
           }
         ]
