@@ -36,16 +36,16 @@
                   "guides/workshop/actions/decode-text",
                   "guides/workshop/actions/set-variable",
                   "guides/workshop/actions/generate-text",
-                  "guides/workshop/actions/send-email",
-                  "guides/workshop/actions/settings",
-                  "guides/workshop/actions/logs"
+                  "guides/workshop/actions/send-email"
                 ]
-              },
+              }
+            ]
+          },
           {
             "group": "Dashboard",
             "pages": [
-              "settings",
-              "logs"
+              "guides/dashboard/settings",
+              "guides/dashboard/logs"
             ]
           }
         ]
@@ -93,12 +93,12 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity"
+    ]
   },
   "footer": {
     "socials": {
