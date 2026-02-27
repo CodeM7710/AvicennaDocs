@@ -4,59 +4,39 @@ icon: "mail"
 description: "Send a custom email using the Resend integration."
 ---
 
-The **Send Email** action lets you send transactional or dynamic emails directly in your endpoint flow using the Resend integration.
+The **Send Email** action lets you send transactional or dynamic emails directly from your endpoint flow using the Resend integration.
 
 This block runs at execution time and supports both static content and dynamic variables from previous steps.
 
+<Callout icon="puzzle">
+  This action requires the **Resend Integration** to be configured in order to run. Your endpoint flow will ignore this block if the integration is not properly configured.
+</Callout>
+
 <Frame>
-  ![Screenshot2026 02 21at18 28 04](/images/Screenshot2026-02-21at18.28.04.png)
+  ![Send Email Block SS](/images/SendEmailBlockSS.png)
 </Frame>
 
-### Resend Integration
-
-This action requires a connected **Resend** integration.
-
-If no integration is connected, you will be prompted to connect one before the block can execute.
+---
 
 ### To
 
-The **To** field defines the recipient.
-
-You can enter:
-
-- A static email address
-- A dynamic variable
-- A combination of both
-
-#### Examples
-
-```text
-user@example.com
-```
-
-```text
-{params.recipient}
-```
+The **To** field defines the recipient's email address. You can enter a static email that will be used in all requests or use a variable for dynamic email sending per every request.
 
 ### From
 
-The **From** field defines the sender.
-
-Format:
+The **From** field defines the sender's name and email address. The syntax should be as follows:
 
 ```text
 Your App Name <hello@yourdomain.com>
 ```
 
-The sending domain must be verified in your Resend account.
+<Note>
+  The Sender's email domain must be verified from your Resend dashboard.
+</Note>
 
 ### Subject
 
-The **Subject** field defines the subject line.
-
-You can include dynamic variables using `{}` syntax.
-
-#### Example
+The **Subject** field defines the subject line of the email. You can include dynamic variables using `{}` syntax. For example:
 
 ```text
 Welcome to our platform, {params.name}!
@@ -64,15 +44,7 @@ Welcome to our platform, {params.name}!
 
 ### Body
 
-The **Body** field contains the email content.
-
-You can:
-
-- Write plain text
-- Include dynamic variables
-- Combine static and dynamic content
-
-#### Example
+The **Body** field contains the email's main content. You can write static plain text or use variables to make each request dynamic! For example:
 
 ```text
 Hi {params.name},
@@ -82,27 +54,3 @@ Thank you for signing up.
 Best,
 The Team
 ```
-
-All variables are resolved at runtime before the email is sent.
-
-### Using Variables
-
-Any previously stored variable can be referenced using:
-
-```text
-{local.VARIABLE_NAME}
-```
-
-Example:
-
-```text
-{local.summary}
-```
-
-### Behavior & Scope
-
-- The email is sent immediately when the block executes.
-- If the block fails (for example, invalid email or unverified domain), flow execution may stop depending on your error handling setup.
-- Dynamic variables are resolved at runtime.
-
-The **Send Email** block is useful for confirmations, notifications, alerts, and AI-generated messaging.
