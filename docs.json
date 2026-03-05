@@ -45,7 +45,8 @@
             "group": "Dashboard",
             "pages": [
               "guides/dashboard/settings",
-              "guides/dashboard/logs"
+              "guides/dashboard/logs",
+              "guides/dashboard/authentication"
             ]
           }
         ]
