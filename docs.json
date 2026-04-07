@@ -37,7 +37,7 @@
                   "guides/workshop/actions/set-variable",
                   "guides/workshop/actions/generate-text",
                   "guides/workshop/actions/send-email",
-                  "guides/workshop/actions/respond.mdx"
+                  "guides/workshop/actions/respond"
                 ]
               }
             ]
