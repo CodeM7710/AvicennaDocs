@@ -1,0 +1,146 @@
+---
+title: "Tally Form Submission Listener"
+---
+
+By the end of this guide, you'll have a fully working webhook listener that sends an email whenever someone submits your Tally form.
+
+<Callout icon="tree-deciduous" color="#FFA500">
+  This guide may include **intermediate to advanced** concepts or terminology.
+</Callout>
+
+---
+
+## What You'll Need
+
+Below are the prerequisites you'll need to follow along with this guide:
+
+- a [Tally](https://tally.so) account (free)
+- a configured Resend integration in Avicenna (if you want to [send an email](/guides/workshop/actions/send-email))
+
+---
+
+## 1. Create a Tally Form
+
+<Steps>
+  <Step title="Create a new form">
+    Log in to [Tally](https://tally.so) and create a new form (let's call it "Submit a Suggestion)
+  </Step>
+  <Step title="Add a question">
+    Add a short answer or long answer question to your form (you can word the question however you wish)
+
+    <Frame>
+      <img
+        src="/images/image-3.png"
+        alt="Image"
+        title="Image"
+        className="mx-auto"
+      />
+    </Frame>
+  </Step>
+  <Step title="Publish your form">
+    Once your form looks something like the image above, you can go ahead and publish it!
+  </Step>
+</Steps>
+
+## 2. Create a Listener Endpoint
+
+<Steps>
+  <Step title="Create a POST endpoint">
+    From the Avicenna Dashboard, create a new `POST` endpoint (we'll name ours `/tally-listener`).
+
+    <Frame>
+      ![Image](/images/image-4.png)
+    </Frame>
+  </Step>
+  <Step title="Add request body keys">
+    Tally will send information about the form submission via the request body. Add the `eventId` and `data` keys to the request body. 
+
+    <Info>
+      A full example of the request body Tally sends can be found [here](https://tally.so/help/webhooks#7333898d17a247c892bd00e30e2d582b).
+    </Info>
+
+    <Frame>
+      ![Image](/images/image-6.png)
+    </Frame>
+  </Step>
+  <Step title="Add an action block">
+    Add the [Send Email action](/guides/workshop/actions/send-email) to your workflow and connect it to the base starting block.
+
+    <Tip>
+      If you don't want to send an email, you can instead use a different action such as [Send External Request](/guides/workshop/actions/send-external-request) to trigger something else.
+    </Tip>
+
+    <Frame>
+      ![Image](/images/image-7.png)
+    </Frame>
+  </Step>
+  <Step title="Customize your email body">
+    You can customize your email's body however you like. Use the variables listed below to add content from the Tally form submission:
+
+    - `{body.data.fields.0.value}` - Returns the answer to the first question in your form
+    - `{body.eventId}` - Returns the event ID of the Tally form submission
+
+    <Info>
+      A full example and list of keys that are returned by Tally and can be accessed through variables can be found [here](https://tally.so/help/webhooks#7333898d17a247c892bd00e30e2d582b).
+    </Info>
+  </Step>
+  <Step title="Deploy your endpoint">
+    Add a simple [Respond](/guides/workshop/actions/respond) action to tell Tally that you received the webhook. You're then ready to deploy the endpoint!
+
+    <Frame>
+      ![Image](/images/image-9.png)
+    </Frame>
+  </Step>
+</Steps>
+
+## 3. Configure Tally Webhook
+
+<Steps>
+  <Step title="Copy endpoint URL">
+    Copy the endpoint URL for your webhook listener.
+
+    <Frame>
+      ![Image](/images/image-11.png)
+    </Frame>
+  </Step>
+  <Step title="Add Tally webhook integration">
+    Navigate to the **Integrations** tab from the Tally settings page for your form. Click **Connect** under the "Webhooks" option.
+
+    <Frame>
+      ![Image](/images/image-12.png)
+    </Frame>
+  </Step>
+  <Step title="Configure webhook integration">
+    Paste your Avicenna listener endpoint's URL in the \*\*Endpoint URL \*\*field. If your API requires authentication, add an API key in the HTTP Headers field. Click **Connect** once you're done.
+
+    <Frame>
+      ![Screenshot 2026 05 04 At 6 02 06 PM](/images/Screenshot-2026-05-04-at-6.02.06-PM.png)
+    </Frame>
+  </Step>
+</Steps>
+
+## 4. All done!
+
+Try submitting a response to your Tally form and watch your Avicenna endpoint run! You can check your endpoint's logs from the Avicenna Dashboard to verify that the webhook executed.
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Do I need a paid Tally account?">
+    No, this setup works fine with Tally's free plan!
+  </Accordion>
+
+  <Accordion title="Can I trigger something other than an email?">
+    Yes. Instead of the Send Email action, you can use the Send External Request action to call any third-party service or API of your choice.
+  </Accordion>
+
+  <Accordion title="How do I access answers from fields other than the first question?">
+    You can use `{body.data.fields.1.value}` for the second field, `{body.data.fields.2.value}` for the third, and so on. The full list of available keys is documented in [Tally's webhook reference](https://tally.so/help/webhooks#7333898d17a247c892bd00e30e2d582b).
+  </Accordion>
+
+  <Accordion title="Do I need to add authentication to my endpoint?">
+    Authentication is optional. If your API requires it, you can add an API key in the HTTP Headers field when configuring the Tally webhook integration.
+  </Accordion>
+</AccordionGroup>

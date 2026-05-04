@@ -37,10 +37,10 @@
                   "guides/workshop/actions/decode-text",
                   "guides/workshop/actions/set-variable",
                   "guides/workshop/actions/generate-text",
-                  "guides/workshop/actions/send-email"
+                  "guides/workshop/actions/send-email",
+                  "guides/workshop/actions/respond"
                 ]
-              },
-              "guides/workshop/actions/respond"
+              }
             ]
           },
           {
@@ -79,6 +79,18 @@
         "hidden": true,
         "pages": [
           "changelog"
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Endpoint Examples",
+            "icon": "box",
+            "pages": [
+              "tally-form-submission-listener"
+            ]
+          }
         ]
       }
     ]
