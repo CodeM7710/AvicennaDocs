@@ -1,0 +1,32 @@
+---
+title: "Endpoint Methods"
+icon: "plug-zap"
+---
+
+An endpoint can be set to one of five **methods**, depending on its intended use. Each of these methods and example use cases are described below.
+
+<Frame>
+  ![Image](/images/image.png)
+</Frame>
+
+Note that many methods have similar or identical functionality. The biggest differences are usually in their intended use cases, as their names imply. If configured correctly, an endpoint's method may not significantly affect its functionality.
+
+## GET Method
+
+The `GET` method is the default, most basic type of endpoint. It allows you to run workflows and respond with information. `GET` endpoints do not include request bodies, so all inputs must be in the form of [query parameters](/query-parameters).
+
+`GET` endpoints are usually used for simple data retrieval tasks, such as looking up a user's profile information.
+
+## POST, PUT, & PATCH Methods
+
+The `POST`, `PUT`, and `PATCH` methods are all identical in functionality and can technically be used interchangeably. They allow you to receive information and run workflows based off of it. In addition to query parameters, these methods also include request bodies, allowing for much larger inputs.
+
+- `POST` endpoints are usually used for creating new information in a database. In addition, they are often used as <Tooltip tip="A webhook listener is an endpoint that a webhook can call when a certain event occurs to trigger a responding workflow." headline="Webhook Listener">webhook listeners</Tooltip>.
+- `PUT` endpoints are usually used for completely replacing existing information in a database.
+- `PATCH` endpoints are usually used for selectively editing certain snippets of information in a datatbase.
+
+## DELETE Method
+
+The `DELETE` method has similar functionality to `GET`. It allows you to run workflows and respond with a status. `DELETE` endpoints do not include request bodies, so all inputs must be in the form of [query parameters](https://docs.avicenna.dev/query-parameters).
+
+`DELETE` endpoints are usually used for deleting, archiving, or deactivating an entry of information in a database.

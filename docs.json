@@ -24,6 +24,7 @@
             "group": "Workshop",
             "pages": [
               "workshop-overview",
+              "methods",
               "query-parameters",
               {
                 "group": "Actions",
