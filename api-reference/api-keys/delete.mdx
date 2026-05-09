@@ -1,0 +1,32 @@
+---
+title: 'Delete API Key'
+api: 'DELETE /admin/api-keys/:api_key_id'
+description: "Delete an existing API key."
+---
+
+## Path Parameters
+
+<ParamField path="api_key_id" type="string" required>
+  The API key ID (not the API key itself).
+</ParamField>
+
+<RequestExample>
+
+```bash cURL
+curl -X DELETE https://YOUR_API_SUBDOMAIN.avicenna.dev/admin/api-keys/6c3c3816-b8ad-4279-8fe0-1d19a0640f96 \
+  -H 'Authorization: Bearer avcna_sk_xxxxxxxxx'
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+    "success": true,
+    "message": "API key deleted"
+
+}
+```
+
+</ResponseExample>

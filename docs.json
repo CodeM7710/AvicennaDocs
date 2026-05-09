@@ -1,13 +1,18 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "Avicenna Documentation",
+  "name": "Avicenna Docs",
   "colors": {
     "primary": "#005446",
     "dark": "#03b295",
     "light": "#03b295"
   },
   "favicon": "/favicon.ico",
+  "api": {
+    "playground": {
+      "display": "simple"
+    }
+  },
   "navigation": {
     "tabs": [
       {
