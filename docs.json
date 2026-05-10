@@ -56,7 +56,8 @@
               "guides/dashboard/settings"
             ]
           }
-        ]
+        ],
+        "icon": "book-text"
       },
       {
         "tab": "API Reference",
@@ -69,7 +70,8 @@
               "api-reference/api-keys/delete"
             ]
           }
-        ]
+        ],
+        "icon": "square-terminal"
       },
       {
         "tab": "Changelog",
@@ -88,7 +90,8 @@
               "tally-form-submission-listener"
             ]
           }
-        ]
+        ],
+        "icon": "book-open-text"
       }
     ]
   },
